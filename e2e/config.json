@@ -1,0 +1,7 @@
+{
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testRunner": "jest-jasmine2",
+    "setupFilesAfterEnv": ["./testSetup.ts"]
+  }
+  

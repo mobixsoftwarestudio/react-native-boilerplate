@@ -16,6 +16,7 @@
     "e2e:ios": "e2e:build:ios && e2e:test:ios"
   },
   "dependencies": {
+    "@react-navigation/native": "^6.0.8",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-react": "^7.28.0",
     "react": "17.0.2",

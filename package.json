@@ -13,7 +13,8 @@
     "e2e:build:ios": "detox build -c ios.sim.debug",
     "e2e:test:ios": "yarn start | detox test -c ios.sim.debug",
     "e2e:android": "e2e:build:android && e2e:test:android",
-    "e2e:ios": "e2e:build:ios && e2e:test:ios"
+    "e2e:ios": "e2e:build:ios && e2e:test:ios",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.8",
@@ -55,7 +56,8 @@
     "prettier": "^2.6.0",
     "react-test-renderer": "17.0.2",
     "ts-jest": "^27.1.3",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "husky": "^7.0.0"
   },
   "resolutions": {
     "@types/react": "^17"

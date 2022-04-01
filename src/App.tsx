@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { QueryClientProvider, QueryClient } from 'react-query';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Routes as AppRoutes } from 'src/Routes/AppRoutes';
+import { Routes } from './modules/routes';
 
 export const App = () => {
   const queryClient = new QueryClient();
@@ -11,7 +11,7 @@ export const App = () => {
     <SafeAreaProvider>
       <QueryClientProvider client={queryClient}>
         <NavigationContainer>
-          <AppRoutes />
+          <Routes />
         </NavigationContainer>
       </QueryClientProvider>
     </SafeAreaProvider>

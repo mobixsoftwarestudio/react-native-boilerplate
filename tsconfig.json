@@ -16,11 +16,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "baseUrl": "./src",
-    "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
+    "noFallthroughCasesInSwitch": true,
     "paths": {
-      "src": ["./src"],
+      "@modules/*": ["./src/modules/*"],
       // "@navigation/*": ["./src/navigation/*"],
       // "@components/*": ["./src/components/*"],
       // "@assets/*": ["./assets/*"],

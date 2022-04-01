@@ -45,9 +45,71 @@ Contains all global contexts created with [Context API](https://reactjs.org/docs
 
 Contains all global [Hooks](https://reactjs.org/docs/hooks-reference.html).
 
+```typescript
+export const useUser = () => {
+  const [name, setName] = useState<string>('');
+
+  const onChangeName = (value: string) => {
+    setName(value);
+  };
+
+  return {
+    name,
+    onChangeName,
+  };
+};
+```
+
 ## queries
 
 Contains all global [queries](https://react-query.tanstack.com/reference/useQuery).
+
+```typescript
+import { useQuery } from 'react-query';
+import axios from 'axios';
+import { RequestOptionsType } from '../../types';
+
+type ExampleParams = {
+  param1: any;
+  param2: any;
+};
+
+type RequestParans = {
+  param1: any;
+  param2: any;
+  requestOptions: RequestOptionsType;
+};
+
+type ResponseType = {};
+
+const queryKey = 'example';
+
+const fetchRequest = async ({
+  param1,
+  param2,
+}: ExampleParams): Promise<ResponseType> => {
+  return axios
+    .get(`url.request/${param1},${param2}`)
+    .then(response => response.data);
+};
+
+const useExample = ({
+  param1,
+  param2,
+  requestOptions: { refetchOnWindowFocus, enabled },
+}: RequestParans) => {
+  return useQuery(
+    [queryKey, { param1, param2 }],
+    () => fetchRequest({ param1, param2 }),
+    {
+      refetchOnWindowFocus,
+      enabled,
+    },
+  );
+};
+
+export { useExample, queryKey };
+```
 
 ## services
 

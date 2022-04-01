@@ -27,7 +27,7 @@ git@github.com:mobixsoftwarestudio/react-native-boilerplate.git
 - [Jest](https://jestjs.io/)
 - [Detox](https://github.com/wix/Detox)
 
-# Files
+# Folders
 
 ## assets
 
@@ -45,4 +45,49 @@ Contains all global contexts created with [Context API](https://reactjs.org/docs
 
 Contains all global [Hooks](https://reactjs.org/docs/hooks-reference.html).
 
+## queries
+
+Contains all global [queries](https://react-query.tanstack.com/reference/useQuery).
+
+## services
+
+Contains all external services configurations, such as api base url and interceptors.
+
+## themes
+
+Contains all theme configurations.
+
+## types
+
+Contains all global types.
+
 ## modules
+
+Contains every functionally of the application divided by the following folders:
+
+### assets
+
+Contains all the assets of this module.
+
+### components
+
+Contains all the components of this module.
+
+### hooks
+
+Contains all the hooks of this module.
+
+### queries
+
+Contains all the queries of this module.
+
+### screens
+
+Constains all the screens of this module.
+
+<br />
+
+It should also have the following files:
+
+- routes.tsx: responsible for handling the module's routing.
+- types.ts: responsible for storing the module's types.

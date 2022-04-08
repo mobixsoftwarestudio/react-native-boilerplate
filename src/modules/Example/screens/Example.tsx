@@ -1,12 +1,10 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-// import { Container } from './styles';
-
-const Auth: React.FC = () => {
+export const Example = () => {
   return (
     <View style={styles.container}>
-      <Text>Authentication</Text>
+      <Text>Example</Text>
     </View>
   );
 };
@@ -16,5 +14,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
-export { Auth };

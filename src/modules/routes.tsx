@@ -1,9 +1,9 @@
 import * as React from 'react';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { LoginExample } from '@modules/Auth/screens/LoginExample';
+import { Example } from '@modules/Example/screens/Example';
 // NOTE here you will import the screens from that module
-import { Auth } from 'src/Modules/Auth/index';
-import { Example } from 'src/Modules/Example/index';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +15,7 @@ const screenOptions = {};
 const authScreens = [
   {
     name: 'Auth',
-    component: Auth,
+    component: LoginExample,
     options: screenOptions,
   },
   {

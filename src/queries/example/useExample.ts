@@ -1,7 +1,6 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
-
-import { RequestOptionsType } from 'src/types/requestTypes';
+import { RequestOptionsType } from '../../types';
 
 type ExampleParams = {
   param1: any;
